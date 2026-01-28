@@ -1,4 +1,5 @@
 import pycountry
+import re
 
 class CountryProcessor:
     @staticmethod
@@ -13,3 +14,10 @@ class CountryProcessor:
             return country.alpha_2
         except (LookupError, AttributeError):
             return "Unknown"
+
+    @staticmethod
+    def extract_country(text: str) -> str:
+        match = re.search(r"Located in\s+(.*)", text, re.IGNORECASE)
+        if match:
+            return match.group(1).strip()
+        return "Unknown"
