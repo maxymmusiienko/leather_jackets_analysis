@@ -15,7 +15,6 @@ class OlxScraper(Scraper):
 
     def parse_html_to_dto(self, html):
         soup = BeautifulSoup(html, "html.parser")
-        # Рекомендую перевірити, чи клас 'css-1sw7q4x' ще актуальний
         items = soup.find_all("div", class_="css-1sw7q4x")
         page_dtos = []
 
@@ -45,6 +44,3 @@ class OlxScraper(Scraper):
                 continue
 
         return page_dtos
-
-olx = OlxScraper()
-olx.scrape()
