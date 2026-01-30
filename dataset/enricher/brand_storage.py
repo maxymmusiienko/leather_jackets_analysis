@@ -1,9 +1,9 @@
 class BrandStorage:
-    __FILE_PATH = 'C:\\Users\\Musiyenko.M\\PycharmProjects\\leather_jackets_analysis\\brands.txt'
+    __FILE_PATH = '/brands.txt'
     __brands = []
 
     def __init__(self):
-        self.__brands = self.__extract_brand(BrandStorage.__FILE_PATH)
+        self.__brands = self.__extract_brand(self.__FILE_PATH)
 
     def get_brands(self):
         return self.__brands

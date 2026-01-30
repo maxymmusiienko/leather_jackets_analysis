@@ -1,6 +1,6 @@
 from flashtext import KeywordProcessor
 
-class BrandProcessor(object):
+class BrandProcessor:
     __brands : list
     __keyword_processor : KeywordProcessor
 
