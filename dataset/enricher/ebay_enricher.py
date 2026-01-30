@@ -2,6 +2,7 @@ import re
 
 from dataset.enricher.conditidion_type import ConditionType
 from dataset.enricher.enricher import Enricher
+from dataset.enricher.store_type import StoreType
 
 
 class EbayEnricher(Enricher):
@@ -22,3 +23,6 @@ class EbayEnricher(Enricher):
         if match:
             return match.group(1).strip()
         return "Unknown"
+
+    def get_store_type(self) -> StoreType:
+        return StoreType.INTERNATIONAL

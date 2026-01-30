@@ -1,5 +1,5 @@
 class BrandStorage:
-    __FILE_PATH = '/brands.txt'
+    __FILE_PATH = 'C:\\Users\\Musiyenko.M\\PycharmProjects\\leather_jackets_analysis\\brands.txt'
     __brands = []
 
     def __init__(self):
@@ -14,5 +14,5 @@ class BrandStorage:
                 brands = [line.strip() for line in f if line.strip()]
             return brands
         except FileNotFoundError:
-            print(f"Помилка: Файл '{file_path}' не знайдено.")
+            print(f"Error: File '{file_path}' not found.")
             return []

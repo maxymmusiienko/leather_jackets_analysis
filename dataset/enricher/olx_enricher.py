@@ -2,6 +2,7 @@ import re
 
 from dataset.enricher.conditidion_type import ConditionType
 from dataset.enricher.enricher import Enricher
+from dataset.enricher.store_type import StoreType
 
 
 class OlxEnricher(Enricher):
@@ -23,3 +24,6 @@ class OlxEnricher(Enricher):
             return 0.0
         price_in_target_currency = float(clean_number) / self.__CURRENCY_USD_TO_UAH
         return round(price_in_target_currency, 2)
+
+    def get_store_type(self) -> StoreType:
+        return StoreType.LOCAL

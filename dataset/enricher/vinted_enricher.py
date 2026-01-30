@@ -1,5 +1,6 @@
 from dataset.enricher.conditidion_type import ConditionType
 from dataset.enricher.enricher import Enricher
+from dataset.enricher.store_type import StoreType
 
 
 class VintedEnricher(Enricher):
@@ -22,3 +23,6 @@ class VintedEnricher(Enricher):
         if "nuovo" in condition_data.strip().lower():
             return ConditionType.NEW.value
         return ConditionType.USED.value
+
+    def get_store_type(self) -> StoreType:
+        return StoreType.LOCAL

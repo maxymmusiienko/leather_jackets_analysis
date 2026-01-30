@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 
+from dataset.enricher.store_type import StoreType
+
 
 class Enricher(ABC):
     @abstractmethod
@@ -18,4 +20,8 @@ class Enricher(ABC):
 
     @abstractmethod
     def extract_condition(self, condition_data : str) -> str:
+        pass
+
+    @abstractmethod
+    def get_store_type(self) -> StoreType:
         pass
