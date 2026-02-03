@@ -13,7 +13,7 @@ class EbayEnricher(Enricher):
 
     def extract_price(self, price_data : str) -> float:
         try:
-            price = float(price_data.replace("$", ""))
+            price = float(price_data.replace("$", "").replace(",", ""))
             return price
         except ValueError:
             return 0

@@ -18,7 +18,7 @@ configs = [
 ]
 
 class DataUnionPipeline:
-    FILE_PATH = 'C:\\Users\\Musiyenko.M\\PycharmProjects\\leather_jackets_analysis\\scrape\\masters_jackets_data.csv'
+    FILE_PATH = 'C:\\Users\\Musiyenko.M\\PycharmProjects\\leather_jackets_analysis\\analysis\\masters_jackets_data.csv'
 
     def __init__(self):
         self.brand_storage = BrandStorage()
@@ -36,6 +36,7 @@ class DataUnionPipeline:
         df['simple_condition'] = df['condition'].apply(enricher.extract_condition)
         df['brand'] = df['title'].apply(self.brand_processor.extract_brand)
         df['has_brand'] = df['brand'] != 'Other'
+        df['title_length'] = df['title'].apply(lambda x: len(x))
 
         return df
 
