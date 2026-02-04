@@ -1,5 +1,5 @@
 import pycountry
-import re
+
 
 class CountryProcessor:
     @staticmethod
