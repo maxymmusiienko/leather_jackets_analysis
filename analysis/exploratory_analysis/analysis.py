@@ -180,6 +180,9 @@ def clean_outliers(input_df):
     t_low, t_up = get_IQR_bounds(working_df, 'title_length')
     p_low, p_up = get_IQR_bounds(working_df, 'price($)')
 
+    "Vintage in announcements likely is not a brand but a description"
+    working_df.loc[working_df['brand'] == 'Vintage', 'has_brand'] = False
+
     mask = (
         (working_df['title_length'] >= t_low) & (working_df['title_length'] <= t_up) &
         (working_df['price($)'] >= p_low) & (working_df['price($)'] <= p_up)
