@@ -73,7 +73,7 @@ $$\ln(\text{Price}) = \beta_0 + \beta_1 \ln(\text{TitleLength}) + \beta_2 \text{
 ### Key Insights
 | Variable | Coefficient | P-value | Interpretation                                                                    |
 | :--- | :--- | :--- |:----------------------------------------------------------------------------------|
-| **log_title_length** | 0.4508 | 0.000 | A 1% increase in title length correlates to a **45,08%** increase in price.       |
+| **log_title_length** | 0.4508 | 0.000 | A 1% increase in title length correlates to a **0,4508%** increase in price.      |
 | **has_brand** | 0.2593 | 0.000 | Branded items command a **29.6%** premium over unbranded ones ($e^{0.2593} - 1$). |
 | **simple_condition_Used** | -0.5510 | 0.000 | Used items are valued **42.4%** lower than new items ($e^{-0.5510} - 1$).         |
 
