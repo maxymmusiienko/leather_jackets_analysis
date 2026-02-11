@@ -8,7 +8,7 @@ This project focuses on identifying price determinants in the second-hand leathe
 ## Phase 1: Data Acquisition
 Data was collected from three distinct sources representing both local and large-scale international markets:
 * **eBay:** 11,091 listings (International)
-* **Vinted:** 985 listings (International/C2C)
+* **Vinted.it:** 985 listings (Local)
 * **OLX:** 1,040 listings (Local)
 
 ### Technical Implementation
